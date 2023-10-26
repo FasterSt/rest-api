@@ -1,0 +1,35 @@
+### Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+### Recuperar peliculas por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar peliculas por genero
+GET http://localhost:1234/movies?genre=drama
+
+### Crear una pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Grand thef Auto2",
+  "year": 2023,
+  "director": "Jason Smith",
+  "duration": 175,
+  "poster": "https://i.ebayimg.com/images/g/gXoAAOSwgn1dWpwt/s-l1200.jpg",
+  "genre": [
+    "Crime",
+    "Action",
+    "Drama",
+    "Adventure"
+  ]
+}
+
+
+###Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 1998
+}
